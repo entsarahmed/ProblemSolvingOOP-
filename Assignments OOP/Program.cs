@@ -46,6 +46,18 @@
         Winter
     }
     #endregion
+
+    #region Assign the following Permissions (Read, write, Delete, Execute) in a form of Enum.[Create Variable from previous Enum to Add and Remove Permission from variable, check if specific Permission is existed inside variable ]
+
+    [Flags]
+    enum Permissions
+    {
+        Read=1,
+        Write=2,
+        Delete=4,
+        Execute=8
+}
+    #endregion
     internal class Program
     {
         static void Main(string[] args)
@@ -108,6 +120,28 @@
 
             #endregion
 
+            #region Assign the following Permissions (Read, write, Delete, Execute) in a form of Enum.[Create Variable from previous Enum to Add and Remove Permission from variable, check if specific Permission is existed inside variable ]
+            //Permissions MyP= Permissions.Read;
+            //Console.WriteLine(MyP);
+
+            ////Add Permissions==> |
+            //MyP |= Permissions.Write;
+            //Console.WriteLine(MyP);
+
+         
+
+            ////Remove Permission ==>
+            //MyP &= Permissions.Write;
+            //Console.WriteLine(MyP);
+
+            //if ((MyP & Permissions.Execute) == Permissions.Execute)
+            
+            //    Console.WriteLine("Permission is Exist");
+            //else
+            //    Console.WriteLine("Permission Not Exist");
+
+
+            #endregion
 
 
         }
