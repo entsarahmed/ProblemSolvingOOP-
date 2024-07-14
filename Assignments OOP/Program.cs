@@ -35,6 +35,17 @@
     }
 
     #endregion
+
+    #region 3.Create an enum called "Seas on" with the four seasons (Spring, Summer, Autumn, Winter) as its members. Write a C# program that takes a season name as input from the user and displays the corresponding month range for that season. Note range for seasons ( spring march to may , summer june to august , autumn September to November , winter December to February)
+
+    enum Season
+    {
+        Spring,
+        Summer,
+        Autumn,
+        Winter
+    }
+    #endregion
     internal class Program
     {
         static void Main(string[] args)
@@ -51,19 +62,53 @@
 
             #region 2. Define a struct "Person" with properties "Name" and "Age". Create an array of three "Person" objects and populate it with data. Then, write a C# program to display the details of all the persons in the array.
 
-            Person[] person =
-            {//Object intializer
-                new Person("Ahmed",23),
-                new Person("Ali",22),
-                new Person("Mohmed",30)
+            //Person[] person =
+            //{//Object intializer
+            //    new Person("Ahmed",23),
+            //    new Person("Ali",22),
+            //    new Person("Mohmed",30)
 
-            };
-            foreach (var item in  person)
-            {
-                Console.WriteLine(item);
-            }
+            //};
+            //foreach (var item in  person)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
             #endregion
+
+
+            #region 3.Create an enum called "Seas on" with the four seasons (Spring, Summer, Autumn, Winter) as its members. Write a C# program that takes a season name as input from the user and displays the corresponding month range for that season. Note range for seasons ( spring march to may , summer june to august , autumn September to November , winter December to February)
+            //Console.WriteLine("Enter your Season");
+            //string? SeasonName=Console.ReadLine();
+            //Season season;
+            //if(Enum.TryParse(SeasonName,out season))
+            //{ 
+            //    switch (season)
+            //    {
+            //        case Season.Spring:
+            //            Console.WriteLine("Range: March To May");
+            //            break;
+            //        case Season.Summer:
+            //            Console.WriteLine("Range: June to August");
+            //            break;
+            //        case Season.Autumn:
+            //            Console.WriteLine("Range: Sep to Nov");
+            //            break;
+            //        case Season.Winter:
+            //             Console.WriteLine("Range: Dec To Feb");
+            //            break;
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid SeasonName");
+            //}
+
+
+
+            #endregion
+
+
 
         }
     }
