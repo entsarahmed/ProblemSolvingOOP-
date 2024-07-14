@@ -217,6 +217,34 @@
 
                 #endregion
 
+                #region 7. Create a struct called "Person" with properties "Name" and "Age". Write a C# program that takes details of 3 persons as input from the user and displays the name and age of the oldest person.
+                Person[] person = new Person[3];
+                for(int i=0; i<3; i++)
+                {
+                    string name;
+                    do
+                    {
+                        Console.WriteLine($"Enter your Name {i+1}");
+                        name = Console.ReadLine();
+
+
+                    } while (string.IsNullOrWhiteSpace(name));
+                    person[i].Name = name;
+                    int Age;
+                    bool Flag;
+                    do
+                    {
+                        Console.WriteLine($"Enter Your Age {i+1}");
+                        Flag= int.TryParse(Console.ReadLine(), out Age);
+                    } while (!Flag);
+                    person[i].Age = Age;
+                }
+                Person Oldest = person[0];
+                for (int i = 0; i<3; i++)
+                    if (Oldest.Age<person[i].Age)
+                        Oldest= person[i];
+                Console.WriteLine(Oldest);
+                #endregion
 
             }
         }
